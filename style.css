@@ -1,0 +1,45 @@
+/* Base styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header styles */
+header h1 {
+  font-weight: bold;
+}
+
+/* Product section */
+#products h2 {
+  font-weight: 600;
+}
+
+/* Product card enhancements */
+.card img {
+  object-fit: cover;
+  height: 150px;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+}
+
+/* Responsive tweaks (if needed) */
+@media (max-width: 576px) {
+  header .nav {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .card img {
+    height: 120px;
+  }
+}
