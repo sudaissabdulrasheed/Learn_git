@@ -1,0 +1,32 @@
+Algorithm SumUniqueElements (Input: A[1..n], B[1..m]; Output: sum)
+    Declare i, j, sum as Integer
+    sum := 0
+
+    // Check A elements not in B
+    FOR i ← 1 TO n DO
+        found := FALSE
+        FOR j ← 1 TO m DO
+            IF A[i] = B[j] THEN
+                found := TRUE
+                BREAK
+            END_IF
+        END_FOR
+        IF found = FALSE THEN
+            sum := sum + A[i]
+        END_IF
+    END_FOR
+
+    // Check B elements not in A
+    FOR j ← 1 TO m DO
+        found := FALSE
+        FOR i ← 1 TO n DO
+            IF B[j] = A[i] THEN
+                found := TRUE
+                BREAK
+            END_IF
+        END_FOR
+        IF found = FALSE THEN
+            sum := sum + B[j]
+        END_IF
+    END_FOR
+END_Algorithm

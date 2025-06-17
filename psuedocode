@@ -1,0 +1,9 @@
+Procedure CountAboveThreshold (Input: threshold as Integer, Var count as Integer, Input: vector[1..n] as Array)
+    Declare i as Integer
+    count := 0
+    FOR i ← 1 TO n DO
+        IF vector[i] > threshold THEN
+            count := count + 1
+        END_IF
+    END_FOR
+End_Procedure
